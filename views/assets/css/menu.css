@@ -14,7 +14,7 @@
 #menu li a {
    padding: .563rem 2.5rem .563rem 2.5rem;/*top,right,bottom,left */
    color: #36362C;
-   background-color: #8AAD9F;
+   background-color:#8AAD9F;
    text-decoration: none;/*Eliminar subrayado*/
    border-radius: 15px;
    font-size: 20px;
@@ -32,6 +32,7 @@ ul, ol {
 }
 
 .nav li a {
+   z-index:0 !important;
    background-color:#8AAD9F;
    color:#36362C;
    text-decoration:none;
@@ -43,7 +44,7 @@ ul, ol {
 
 .nav li ul {
    display:none;
-   position:absolute;
+   position:relative;
    min-width:140px;
 }
 
