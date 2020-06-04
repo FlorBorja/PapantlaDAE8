@@ -21,9 +21,6 @@
                 <br>
                 <button type="submit" id="enviar_formulario">REGISTRAR</button>
             </form>
-            <button id="volver">
-                <a href="">Volver</a>
-            </button>
         </div>
     </body>
 </html>

@@ -12,7 +12,6 @@
                     <th>Colonia</th>
                     <th>Rasgos F&iacute;sicos</th>
                     <th>Condici&oacute;n del canino</th>
-                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
