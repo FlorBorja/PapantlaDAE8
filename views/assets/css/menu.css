@@ -1,6 +1,8 @@
 #menu{
    text-align: center;
-   padding-top: 4.15rem;
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+   padding-left: 10rem;
 }
 
 #menu li{
@@ -17,16 +19,16 @@
    border-radius: 15px;
    font-size: 20px;
 }
-/*
+
 ul, ol {
-   list-style:none;/*Elimina simbolos para la lista
+   list-style:none;/*Elimina simbolos para la lista*/
 }
 
 .nav > li {
    padding:10px 10px 0px 10px;
    float:left;
    margin: 70px;
-   margin-top:-70px;
+   margin-top:-50px;
 }
 
 .nav li a {
@@ -34,7 +36,7 @@ ul, ol {
    color:#36362C;
    text-decoration:none;
    padding:10px 12px;
-   display:block;
+   display:block;/*Esto hace que se despliegue el menu en lista*/
    border-radius: 15px;
    margin-top: 3px;
 }
@@ -56,4 +58,4 @@ ul, ol {
 .nav li ul li ul {
    right:0px;
    top:0px;
-}*/
+}
