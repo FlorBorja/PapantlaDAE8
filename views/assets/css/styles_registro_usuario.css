@@ -2,20 +2,13 @@ body{
 	background-image:url("../img/fondo.jpg");
         background-size: 100% 100%;
 }
-#letrero{
-    font-family: "Century Gothic";
-    font-weight: bold;
-    margin-top: -120px;
-    margin-left: 35%;
-    font-size: 50px;
-}
 
 #rectangle{
     width:560px;
-    height:350px;
+    height:200px;
     background-color:#5D907D;
     border-radius: 50px ;
-    margin-top: 140px;
+    margin-top: 200px;
     margin-left: 650px;
 }
 
@@ -23,7 +16,11 @@ label{
     font-family: Felix Titling;
     margin-left: 30px;
     position: absolute;
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+#mascota{
+    margin-left: 250px;
 }
 
 #crear_usuario{
@@ -39,15 +36,27 @@ input{
     margin-top: 40px;
 }
 
-button{
+#volver{
     background-color: #825534;
     height: 30px;
     width: 150px;
     font-family: Felix Titling;
     border-radius: 50px;
     position: absolute; 
-    left: 870px;
-    color: #E5D27A;
+    left: 740px;
+    
+}
+
+#enviar_formulario{
+    color:white;
+    background-color: #825534;
+    height: 30px;
+    width: 150px;
+    font-family: Felix Titling;
+    border-radius: 50px;
+    position: absolute; 
+    left: 970px;
+    top: 355px;
 }
 
 a{
