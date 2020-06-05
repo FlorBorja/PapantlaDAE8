@@ -1,19 +1,54 @@
-Create database PuppyRescue;
+DROP DATABASE IF EXISTS puppyrescue;
 
-use PuppyRescue;
+CREATE DATABASE puppyRescue;
 
-CREATE TABLE `puppyrescue`.`usuario` ( 
-`idUs` INT NOT NULL AUTO_INCREMENT , 
-`nomUs` VARCHAR(25) NOT NULL , 
-`passUs` VARCHAR(8) NOT NULL , 
-PRIMARY KEY (`idUs`)) 
-ENGINE = InnoDB;
+USE puppyRescue;
 
-CREATE TABLE `puppyrescue`. ( 
-`idCan` INT NOT NULL AUTO_INCREMENT , 
-`calleCan` VARCHAR(50) NOT NULL ,
-`colCan` VARCHAR(50) NOT NULL , 
-`rasCan` VARCHAR(100) NOT NULL , 
-`condCan` VARCHAR(100) NOT NULL , 
-PRIMARY KEY (`idCan`)) 
-ENGINE = InnoDB;
+CREATE TABLE usuario( 
+    idUs INT NOT NULL AUTO_INCREMENT, 
+    nomUs VARCHAR(25) NOT NULL, 
+    passUs VARCHAR(8) NOT NULL, 
+
+    PRIMARY KEY (idUs)
+);
+
+CREATE TABLE mascota(
+    idMas INT NOT NULL AUTO_INCREMENT,
+    nomMas VARCHAR(25) NOT NULL,
+    raza VARCHAR(25) NOT NULL,
+    color VARCHAR (25) NOT NULL,
+    edad INT NOT NULL,
+    tamano VARCHAR(25) NOT NULL,
+    esterilizacion VARCHAR(25) NOT NULL,
+    condicion VARCHAR(100) NOT NULL,
+    rasgo VARCHAR(100) NOT NULL,
+    dueno VARCHAR(50) NOT NULL,
+    direccion VARCHAR(50) NOT NULL,
+    telefono INT NOT NULL,
+
+    PRIMARY KEY (idMas)
+);
+
+CREATE TABLE canino( 
+    idCan INT NOT NULL AUTO_INCREMENT, 
+    calleCan VARCHAR(50) NOT NULL,
+    colCan VARCHAR(50) NOT NULL, 
+    rasCan VARCHAR(100) NOT NULL, 
+    condCan VARCHAR(100) NOT NULL, 
+
+    PRIMARY KEY (idCan)
+);
+
+CREATE TABLE institucion(
+    idInst INT NOT NULL AUTO_INCREMENT,
+    nomInst VARCHAR(50) NOT NULL,
+    dirInst VARCHAR(50) NOT NULL,
+    telInst INT NOT NULL,
+    cp INT NOT NULL,
+    nomRep VARCHAR(50) NOT NULL,
+    cargo VARCHAR(50) NOT NULL,
+    tipoInst VARCHAR(50) NOT NULL,
+    ideTrib VARCHAR(25) NOT NULL,
+
+    PRIMARY KEY (idInst) 
+);

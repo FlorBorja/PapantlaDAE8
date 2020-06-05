@@ -10,13 +10,13 @@
                 <label>INSTITUCIÓN:</label>
                 <br><br>
                 <label>Nombre:</label>
-                <input type="text" name="nombre" id="nombre"/>
+                <input type="text" name="nomInst" id="nombre"/>
                 <br>
                 <label>Dirección:</label>
-                <input type="text" name="direccion" id="direccion"/>
+                <input type="text" name="dirInst" id="direccion"/>
                 <br>
                 <label>Teléfono:</label>
-                <input type="text" name="telefono" id="telefono"/>
+                <input type="text" name="telInst" id="telefono"/>
                 <br>
                 <label>Código Postal:</label>
                 <input type="text" name="cp" id="cp"/>
@@ -25,16 +25,16 @@
                 <label>REPRESENTANTE:</label>
                 <br><br>
                 <label>Nombre Completo:</label>
-                <input type="text" name="nombre" id="nombre"/>
+                <input type="text" name="nomRep" id="nombre"/>
                 <br>
                 <label>Cargo:</label>
-                <input type="text" name="Cargo" id="Cargo"/>
+                <input type="text" name="cargo" id="Cargo"/>
                 <br>
                 <label>Tipo de Institución:</label>
-                <input type="text" name="TipoInst" id="TipoInst"/>
+                <input type="text" name="tipoInst" id="TipoInst"/>
                 <br>
                 <label>Ident. Tributaria:</label>
-                <input type="text" name="IdTrib" id="IdTrib"/>
+                <input type="text" name="ideTrib" id="IdTrib"/>
         </div>
                 <input id="enviar_formulario" type="submit" value="Enviar Datos"/>
             </form>

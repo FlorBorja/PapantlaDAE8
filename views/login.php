@@ -1,4 +1,5 @@
 <?php $GLOBALS['page_name'] = 'login'; ?>
+
 <html>
     <head>
         <title>Puppy Rescue</title>

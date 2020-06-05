@@ -8,7 +8,7 @@
         <div id="rectangle1">
             <form method="post">
                 <label>Nombre:</label>
-                <input type="text" name="nombre_mas" id="nombre_mas"/>
+                <input type="text" name="nomMas" id="nombre_mas"/>
                 <br>
                 <label>Raza:</label>
                 <input type="text" name="raza" id="raza"/>
@@ -29,7 +29,7 @@
                 <input type="text" name="condicion" id="condicion"/>
                 <br>
                 <label>Rasgo físico característico:</label>
-                <input type="text" name="rasgo_caracteristico" id="rasgo_caracteristico"/>
+                <input type="text" name="rasgo" id="rasgo_caracteristico"/>
         </div>
         <div id="rectangle2">
                 <label>Dueño:</label>
