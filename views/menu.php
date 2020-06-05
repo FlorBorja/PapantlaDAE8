@@ -1,4 +1,6 @@
 <LINK href="../assets/css/menu.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+</script>
 <div id="menu">
 			<ul class="nav">
                 <li><a href="">MASCOTA</a>
@@ -23,6 +25,6 @@
 						<li><a href="">Modificar Datos</a></li>
 					</ul>
                 </li>
-				<li><a href="">CERRAR SESI&Oacute;N</a></li>
+				<li><a href="../logout.php">CERRAR SESI&Oacute;N</a></li>
 			</ul>
 		</div>

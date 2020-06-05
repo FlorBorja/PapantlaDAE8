@@ -3,9 +3,10 @@
 <html>
     <head>
         <title>Puppy Rescue</title>
-        <LINK href="../views/assets/css/styles.css" rel="stylesheet" type="text/css"/>
+        <LINK href="views/assets/css/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+    <form action="./login/authenticate" method="POST">
         <div id="rectangle">
             <label>
                 USUARIO:
@@ -24,10 +25,11 @@
             </button>
             <label id="crear_usuario">
                 ¿NO TIENES UNA CUENTA?
-                <a href="crear_usuario.php">
+                <a href="views/registro_usuario.php">
                     CREA UNA.
                 </a>
             </label>
         </div>
+    </form>   
     </body>
 </html>
