@@ -2,7 +2,7 @@
 
 class Usuario{
    
-    private $idUs;
+    private $id;
     private $nomUs;
     private $passUs;
 
@@ -11,8 +11,8 @@ class Usuario{
         $this->passUs = $passUs;
     }
 
-    public function setID($idUs){
-        $this->idUs = $idUs;
+    public function setID($id){
+        $this->id = $id;
     }
 
     public function setName($nomUs){
@@ -24,7 +24,7 @@ class Usuario{
     }
 
     public function getID(){
-        return $this->idUs;
+        return $this->id;
     }
 
     public function getName(){

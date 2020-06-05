@@ -16,7 +16,7 @@
                 <button type="submit" id="enviar_formulario">REGISTRAR</button>
             </form>
             <button id="volver">
-                <a href="login.php">Volver</a>
+                <a href="../">Volver</a>
             </button>
         </div>
     </body>

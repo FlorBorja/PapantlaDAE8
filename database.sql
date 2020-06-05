@@ -5,15 +5,15 @@ CREATE DATABASE puppyRescue;
 USE puppyRescue;
 
 CREATE TABLE usuario( 
-    idUs INT NOT NULL AUTO_INCREMENT, 
+    id INT NOT NULL AUTO_INCREMENT, 
     nomUs VARCHAR(25) NOT NULL, 
     passUs VARCHAR(8) NOT NULL, 
 
-    PRIMARY KEY (idUs)
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE mascota(
-    idMas INT NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT,
     nomMas VARCHAR(25) NOT NULL,
     raza VARCHAR(25) NOT NULL,
     color VARCHAR (25) NOT NULL,
@@ -26,21 +26,21 @@ CREATE TABLE mascota(
     direccion VARCHAR(50) NOT NULL,
     telefono INT NOT NULL,
 
-    PRIMARY KEY (idMas)
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE canino( 
-    idCan INT NOT NULL AUTO_INCREMENT, 
+    id INT NOT NULL AUTO_INCREMENT, 
     calleCan VARCHAR(50) NOT NULL,
     colCan VARCHAR(50) NOT NULL, 
     rasCan VARCHAR(100) NOT NULL, 
     condCan VARCHAR(100) NOT NULL, 
 
-    PRIMARY KEY (idCan)
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE institucion(
-    idInst INT NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT,
     nomInst VARCHAR(50) NOT NULL,
     dirInst VARCHAR(50) NOT NULL,
     telInst INT NOT NULL,
@@ -50,5 +50,5 @@ CREATE TABLE institucion(
     tipoInst VARCHAR(50) NOT NULL,
     ideTrib VARCHAR(25) NOT NULL,
 
-    PRIMARY KEY (idInst) 
+    PRIMARY KEY (id) 
 );

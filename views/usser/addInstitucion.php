@@ -6,7 +6,7 @@
     <body>
         <?php include_once '../menu.php' ?>
         <div id="rectangle1">
-            <form method="post">
+            <form action="./add-institucion" method="POST">
                 <label>INSTITUCIÓN:</label>
                 <br><br>
                 <label>Nombre:</label>

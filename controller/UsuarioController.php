@@ -19,7 +19,7 @@ class UsuarioController {
 	) {
 		if (empty($nomUs) || empty($passUs)) {
 			echo"<script type='text/javascript'>
-    			alert('All fields must be filled');
+    			alert('Todos los campos deben de ser llenados');
     			window.location.href='/PAPANTLADAE8/';
     			</script>";
 		}
@@ -28,7 +28,7 @@ class UsuarioController {
 
 		if(empty($usser)) {
 			echo"<script type='text/javascript'>
-    			alert('Email or password are incorrect');
+    			alert('Usuario o contraseña incorrecta');
     			window.location.href='/PAPANTLADAE8/';
     			</script>";
 		}
@@ -39,7 +39,7 @@ class UsuarioController {
 		}
 		else {
 			echo"<script type='text/javascript'>
-    			alert('Email or password are incorrect');
+    			alert('Usuario o contraseña incorrecta');
     			window.location.href='/PAPANTLADAE8';
     			</script>";
 		}
@@ -58,7 +58,7 @@ class UsuarioController {
 	) {
 		if(empty($nomUs) || empty($passUs)){
 			echo"<script type='text/javascript'>
-    			alert('All fields must be filled');
+    			alert('Todos los campos deben de ser llenados);
     			window.location.href='views/registro_usuario.php;
     			</script>";
 		}
@@ -69,7 +69,7 @@ class UsuarioController {
 		);
 		$this->usuarioDao->create($usser);
 		echo"<script type='text/javascript'>
-			alert('Now you\'re sign in');
+			alert('La cuenta ha sido registrada correctamente');
     		window.location.href='/PAPANTLADAE8/';
     		</script>";
 	}

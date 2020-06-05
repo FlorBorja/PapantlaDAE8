@@ -2,7 +2,7 @@
 
     class Mascota{
 
-        private $idMas;
+        private $id;
         private $nomMas;
         private $raza;
         private $color;
@@ -41,8 +41,8 @@
         $this->telefono = $telefono;
     }
 
-    function setIdMas($idMas) {
-        $this->idMas = $idMas;
+    function setID($id) {
+        $this->id = $id;
     }
 
     function setNomMas($nomMas) {
@@ -89,8 +89,8 @@
         $this->telefono = $telefono;
     }
 
-    function getIdMas() {
-        return $this->idMas;
+    function getID() {
+        return $this->id;
     }
 
     function getNomMas() {

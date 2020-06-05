@@ -6,7 +6,7 @@
     <body>
         <?php include_once '../menu.php' ?>
         <div id="rectangle">
-            <form method="post">
+            <form action="./add-canino" method="POST">
                 <label>Calle:</label>
                 <input type="text" name="calleCan" required/>
                 <br>

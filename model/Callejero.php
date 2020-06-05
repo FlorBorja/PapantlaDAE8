@@ -1,8 +1,8 @@
 <?php
 
-class Callejero(){
+class Callejero{
 
-    private $idCan;
+    private $id;
     private $calleCan;
     private $colCan;
     private $rasCan;
@@ -20,8 +20,8 @@ class Callejero(){
         $this->condCan = $condCan;
     }
 
-    public function setIDCan($idCan){
-        $this->idCan = $idCan;
+    public function setID($id){
+        $this->id = $id;
     }
 
     public function setCalle($calleCan){
@@ -40,8 +40,8 @@ class Callejero(){
         $this->condCan = $condCan;
     }
 
-    public function getIDCan(){
-        return $this->idCan;
+    public function getID(){
+        return $this->id;
     }
 
     public function getCalle(){

@@ -6,7 +6,7 @@
     <body>
         <?php include_once '../menu.php' ?>
         <div id="rectangle1">
-            <form method="post">
+            <form action="./add-mascota" method="POST">
                 <label>Nombre:</label>
                 <input type="text" name="nomMas" id="nombre_mas"/>
                 <br>

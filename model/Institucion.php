@@ -1,7 +1,7 @@
 <?php
 
-class Institucion(){
-    private $idInst;
+class Institucion{
+    private $id;
     private $nomInst;
     private $dirInst;
     private $telInst;
@@ -31,8 +31,8 @@ class Institucion(){
         $this->ideTrib = $ideTrib;
     }
 
-    public function setIDInst($idInst){
-        $this->idInst = $idInst;
+    public function setID($id){
+        $this->id = $id;
     }
 
     public function setNomInst($nomInst){
@@ -67,8 +67,8 @@ class Institucion(){
         $this->ideTrib = $ideTrib;
     }
 
-    public function getIDInst(){
-        return $this->idInst;
+    public function getID(){
+        return $this->id;
     }
 
     public function getNomInst(){

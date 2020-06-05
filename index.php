@@ -1,6 +1,9 @@
 <?php
 
 require_once 'controller/UsuarioController.php';
+require_once 'controller/CallejeroController.php';
+require_once 'controller/MascotaController.php';
+require_once 'controller/InstitucionController.php';
 
 if(isset($_SERVER['PATH_INFO'])) {
 	$url = $_SERVER['PATH_INFO'];
@@ -47,23 +50,53 @@ switch ($url) {
 		$controller->showAll();
 		break;
 
-	case '/usser/register-game':
-		$controller = new GamesController();
-		$controller->showRegisterGame();
-		break;
+	case '/views/usser/consultaCallejero':
+		$controller = new CallejeroController();
+		$controller->showRegistrarCallejero();
+		break;*/
 
-	case '/usser/add-game':
-		$controller = new GamesController();
-		$controller->addNewGame(
-			form('title'),
-			form('genders'),
-			form('rating'),
-			form('platform'),
-			form('price')
+	case '/views/usser/add-canino':
+		$controller = new CallejeroController();
+		$controller->addNewCallejero(
+			form('calleCan'),
+			form('colCan'),
+			form('rasCan'),
+			form('condCan')
 		);
 		break;
 
-	case '/usser/edit-game':
+	case '/views/usser/add-mascota':
+		$controller = new MascotaController();
+		$controller->addNewMascota(
+			form('nomMas'),
+			form('raza'),
+			form('color'),
+			form('edad'),
+			form('tamano'),
+			form('esterilizacion'),
+			form('condicion'),
+			form('rasgo'),
+			form('dueno'),
+			form('direccion'),
+			form('telefono')
+		);
+		break;
+	
+	case '/views/usser/add-institucion':
+		$controller = new InstitucionController();
+		$controller->addNewInstitucion(
+			form('nomInst'),
+			form('dirInst'),
+			form('telInst'),
+			form('cp'),
+			form('nomRep'),
+			form('cargo'),
+			form('tipoInst'),
+			form('ideTrib')
+		);
+		break;
+		
+	/*case '/usser/edit-game':
 		$controller = new GamesController();
 		$controller->showModifyGame(form('id'));
 		break;
