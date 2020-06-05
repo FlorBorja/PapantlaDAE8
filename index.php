@@ -55,6 +55,11 @@ switch ($url) {
 		$controller->showRegistrarCallejero();
 		break;*/
 
+	case '/views/usser/traer-caninos':
+		$controller = new CallejeroController();
+		$controller->showCallejeros();
+		break;	
+
 	case '/views/usser/add-canino':
 		$controller = new CallejeroController();
 		$controller->addNewCallejero(

@@ -1,13 +1,14 @@
+<?php
+require_once "model\dbConnection\dao\CallejeroDAO.php";
+$dao = new CallejeroDao();
+?>
+
 <html>
     <head>
         <title>Puppy Rescue: Consulta de Callejeros</title>
-        <link href="../assets/css/consulta_callejero.css" rel="stylesheet" type="text/css">
+        <link href="views/assets/css/consulta_callejero.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <?php include_once '../menu.php' ?>
-        <form action="./traer-caninos" method="POST">
-                <button type="submit" >TRAER</button>
-            </form>
         <table>
             <thead>
                 <tr>
@@ -18,7 +19,7 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach ($this->caninos as $canino) { ?>
+            <?php foreach ($dao->getCaninos() as $canino) { ?>
                 <tr>
                   <td><?php echo $canino->getCalle(); ?></td>
                   <td><?php echo $canino->getColonia(); ?></td>

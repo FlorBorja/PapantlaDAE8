@@ -62,6 +62,11 @@ class CallejeroController {
     		</script>";
 	}
 
+	public function showCallejeros(){
+		$this->caninos = $this->callejeroDao->getCaninos();
+		require_once 'views\usser\consultaCallejero.php'	;
+    }
+
 	/*public function showModifyGame($id) {
 		$this->games = $this->gamesDao->find($id);
 		$game = $this->games[0];

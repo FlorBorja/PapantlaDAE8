@@ -52,3 +52,12 @@ CREATE TABLE institucion(
 
     PRIMARY KEY (id) 
 );
+
+Delimiter $$
+CREATE PROCEDURE readAllCaninos()
+BEGIN
+	SELECT *
+    FROM canino;
+END $$
+
+Delimiter ;

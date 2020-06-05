@@ -19,7 +19,40 @@ class CallejeroDAO implements DataAccessObject {
             "condCan" => $canino->getCondicion()]);
     }
 
-    public function all() {
+    public function getCaninos(){
+        $caninos = array();
+        $connection = DataBase::getConnection();
+        $sql = "CALL readAllCaninos ()";
+        $statement = $connection->prepare($sql);   
+        /*$resultado->bindParam(1,$id, PDO::PARAM_STR);*/
+        
+        try{
+            $statement->execute();
+            foreach($statement as $row ){
+                $caninos[] = $this->addCanino($row);
+            }
+            return $caninos;
+        }  catch(PDOException $e){
+            print "¡Error!: " . $e->getMessage() . "<br/>";
+
+        }finally{
+            $statement=null;
+            $connection=null;
+        }
+        
+    }
+
+    public function addCanino($row){
+        $calleCan=$row["calleCan"];
+        $colCan=$row["colCan"];
+        $rasCan=$row["rasCan"];
+        $condCan=$row["condCan"];
+        
+        return new Callejero($calleCan, $colCan, $rasCan, $condCan);
+    }
+
+
+    /*public function all() {
         $connection = DataBase::getConnection();
         $statement = $connection->prepare("SELECT * FROM canino");
         $statement->execute();
@@ -39,7 +72,7 @@ class CallejeroDAO implements DataAccessObject {
         }
 
         return $caninos;
-    }
+    }*/
 
     public function find($id) {
         $connection = DataBase::getConnection();
@@ -63,7 +96,7 @@ class CallejeroDAO implements DataAccessObject {
         return $caninos;
     }
 
-    public function update($canino) {
+    /*public function update($canino) {
         $connection = DataBase::getConnection();
 
         $sql  = "UPDATE canino ";
@@ -86,5 +119,5 @@ class CallejeroDAO implements DataAccessObject {
         $statement->execute([
             "id" => $canino->getID()
         ]);
-    }
+    }*/
 }
