@@ -15,6 +15,18 @@ class MascotaController {
 		$this->mascotaDao = new MascotaDao();
 	}
 
+	public function showAll() {
+		$this->mascota = $this->mascotaDao->all();
+		$search = false; 
+		require_once 'views/usser/consultaMascota.php';
+	}
+
+	public function showAll2() {
+		$this->mascota = $this->mascotaDao->all();
+		$search = false; 
+		require_once 'views/usser/eliminarMascota.php';
+	}
+
 	/*public function showAll() {
 		$this->caninos = $this->mascotaDao->all();
 		$search = false; 
@@ -129,14 +141,14 @@ class MascotaController {
     		window.location.href='./games-list';
     		</script>";
 	}
-
-	public function deleteCallejero($id) {
-		$this->caninos = $this->mascotaDao->find($id);
-		$canino = $this->canino[0];
-		$this->mascotaDao->delete($canino);
+*/
+	public function deleteMascota($id) {
+		$this->mascotas = $this->mascotaDao->find($id);
+		$mascota = $this->mascotas[0];
+		$this->mascotaDao->delete($mascota);
 		echo"<script type='text/javascript'>
-    		alert('The videogame has been deleted');
-    		window.location.href='./adoptarCallejero';
+    		alert('La mascota ha muerto');
+    		window.location.href='./bienvenida.php';
     		</script>";	
-	}*/
+	}
 }

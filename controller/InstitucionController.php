@@ -15,6 +15,12 @@ class InstitucionController {
 		$this->institucionDao = new institucionDao();
 	}
 
+	public function showAll() {
+		$this->institucion = $this->institucionDao->all();
+		$search = false; 
+		require_once 'views/usser/consultaInstitucion.php';
+	}
+
 	/*public function showAll() {
 		$this->caninos = $this->institucionDao->all();
 		$search = false; 
@@ -74,11 +80,6 @@ class InstitucionController {
     		</script>";
 	}
 
-	public function showInstituciones(){
-		$this->institucion = $this->institucionDao->getInstituciones();
-		require_once 'views\usser\consultaInstitucion.php'	;
-    }
-
 
 	/*public function showModifyGame($id) {
 		$this->games = $this->gamesDao->find($id);
@@ -120,15 +121,5 @@ class InstitucionController {
     		alert('The videogame has been updated');
     		window.location.href='./games-list';
     		</script>";
-	}
-
-	public function deleteCallejero($id) {
-		$this->caninos = $this->institucionDao->find($id);
-		$canino = $this->canino[0];
-		$this->institucionDao->delete($canino);
-		echo"<script type='text/javascript'>
-    		alert('The videogame has been deleted');
-    		window.location.href='./adoptarCallejero';
-    		</script>";	
 	}*/
 }

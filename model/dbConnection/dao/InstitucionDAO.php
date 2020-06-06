@@ -24,92 +24,56 @@ class institucionDAO implements DataAccessObject {
         ]);
     }
 
-    /*public function all() {
+    public function all() {
         $connection = DataBase::getConnection();
-        $statement = $connection->prepare("SELECT * FROM canino");
+        $statement = $connection->prepare("SELECT * FROM institucion");
         $statement->execute();
 
         $result_set = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        $institucions = [];
+        $instituciones = [];
         foreach ($result_set as $institucion) {
-            $new_callejero = new Callejero(
+            $new_institucion = new Institucion(
                 $institucion['nomInst'],
                 $institucion['dirInst'],
                 $institucion['telInst'],
-                $institucion['cp']
+                $institucion['cp'],
+                $institucion['nomRep'],
+                $institucion['cargo'],
+                $institucion['tipoInst'],
+                $institucion['ideTrib']
             );
-            $new_callejero->setID($institucion['id']);
-            array_push($institucions, $new_callejero);
+            $new_institucion->setID($institucion['id']);
+            array_push($instituciones, $new_institucion);
         }
 
-        return $institucions;
-    }*/
-
-    public function getInstituciones(){
-        $instituciones = array();
-        $connection = DataBase::getConnection();
-        $sql = "CALL readAllInstituciones ()";
-        $statement = $connection->prepare($sql);   
-        /*$resultado->bindParam(1,$id, PDO::PARAM_STR);*/
-        
-        try{
-            $statement->execute();
-            foreach($statement as $row ){
-                $instituciones[] = $this->addInstitucion($row);
-            }
-            return $instituciones;
-        }  catch(PDOException $e){
-            print "¡Error!: " . $e->getMessage() . "<br/>";
-
-        }finally{
-            $statement=null;
-            $connection=null;
-        }
-        
-    }
-
-    public function addInstitucion($row){
-        $nomInst=$row["nomInst"];
-        $dirInst=$row["dirInst"];
-        $telInst=$row["telInst"];
-        $cp=$row["cp"];
-        $nomRep=$row["nomRep"];
-        $cargo=$row["cargo"];
-        $tipoInst=$row["tipoInst"];
-        $ideTrib=$row["ideTrib"];
-        
-        return new Institucion(
-        $nomInst,
-        $dirInst,
-        $telInst,
-        $cp,
-        $nomRep,
-        $cargo,
-        $tipoInst,
-        $ideTrib);
+        return $instituciones;
     }
 
     public function find($id) {
         $connection = DataBase::getConnection();
-        $statement = $connection->prepare("SELECT * FROM canino WHERE id=:id");
+        $statement = $connection->prepare("SELECT * FROM institucion WHERE id=:id");
         $statement->execute(["id" => $id]);
 
         $result_set = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        $institucions = [];
+        $instituciones = [];
         foreach ($result_set as $institucion) {
-            $new_callejero = new Callejero(
+            $new_institucion = new Institucion(
                 $institucion['nomInst'],
                 $institucion['dirInst'],
                 $institucion['telInst'],
-                $institucion['cp']
+                $institucion['cp'],
+                $institucion['nomRep'],
+                $institucion['cargo'],
+                $institucion['tipoInst'],
+                $institucion['ideTrib']
             );
-            $new_callejero->setID($institucion['id']);
-            array_push($institucions, $new_callejero);
+            $new_institucion->setID($institucion['id']);
+            array_push($instituciones, $new_institucion);
         }
 
-        return $institucions;
+        return $instituciones;
     }
     /*
     public function update($institucion) {
@@ -127,14 +91,5 @@ class institucionDAO implements DataAccessObject {
             "telInst" => $institucion->gettelInst(),
             "cp" => $institucion->getcp()
         ]);
-    }
-
-    public function delete($institucion) {
-        $connection = DataBase::getConnection();
-        $statement = $connection->prepare("DELETE FROM canino WHERE id=:id");
-        $statement->execute([
-            "id" => $institucion->getID()
-        ]);
-    }
-    */
+    }*/
 }

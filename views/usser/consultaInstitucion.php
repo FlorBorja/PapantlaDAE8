@@ -8,6 +8,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Dirección</th>
                     <th>Teléfono</th>
@@ -21,6 +22,7 @@
             <tbody>
             <?php foreach ($this->institucion as $i) { ?>
                 <tr>
+                  <td><?php echo $i->getID(); ?></td>
                   <td><?php echo $i->getNomInst(); ?></td>
                   <td><?php echo $i->getDirInst(); ?></td>
                   <td><?php echo $i->getTelInst(); ?></td>

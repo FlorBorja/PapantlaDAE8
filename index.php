@@ -99,8 +99,13 @@ switch ($url) {
 
 	case '/views/usser/consultaMascota':
 		$controller = new MascotaController();
-		$controller->showMascotas();
+		$controller->showAll();
 		break;	
+
+	case '/views/usser/consultaMascota2':
+		$controller = new MascotaController();
+		$controller->showAll2();
+		break;		
 	
 	case '/views/usser/add-institucion':
 		$controller = new InstitucionController();
@@ -115,11 +120,11 @@ switch ($url) {
 			form('ideTrib')
 		);
 		break;
-
+	
 	case '/views/usser/consultaInstitucion':
 		$controller = new InstitucionController();
-		$controller->showInstituciones();
-		break;
+		$controller->showAll();
+		break;	
 		
 	/*case '/usser/edit-game':
 		$controller = new GamesController();
@@ -147,7 +152,11 @@ switch ($url) {
 		$controller = new CallejeroController();
 		$controller->deleteCallejero(form('id'));
 		break;
-
+	
+	case '/views/usser/eliminarMascota':
+		$controller = new MascotaController();
+		$controller->deleteMascota(form('id'));
+		break;
 	
 /*
 	case '/usser/remove-game':
