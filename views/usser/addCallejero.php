@@ -5,6 +5,7 @@
     </head>
     <body>
         <?php include_once '../menu.php' ?>
+
         <div id="rectangle">
             <form action="./add-canino" method="POST">
                 <label>Calle:</label>
@@ -22,5 +23,6 @@
                 <button type="submit" id="enviar_formulario">REGISTRAR</button>
             </form>
         </div>
+
     </body>
 </html>

@@ -8,6 +8,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Raza</th>
                     <th>Color</th>
@@ -24,6 +25,7 @@
             <tbody>
             <?php foreach ($this->mascota as $m) { ?>
                 <tr>
+                  <td><?php echo $m->getID(); ?></td>
                   <td><?php echo $m->getNomMas(); ?></td>
                   <td><?php echo $m->getRaza(); ?></td>
                   <td><?php echo $m->getColor(); ?></td>

@@ -27,6 +27,12 @@ class MascotaController {
 		require_once 'views/usser/eliminarMascota.php';
 	}
 
+	public function showAll3() {
+		$this->mascota = $this->mascotaDao->all();
+		$search = false; 
+		require_once 'views/usser/modificarMascota.php';
+	}
+
 	/*public function showAll() {
 		$this->caninos = $this->mascotaDao->all();
 		$search = false; 
@@ -100,48 +106,66 @@ class MascotaController {
 		require_once 'views\usser\consultaMascota.php'	;
     }
 
-	/*public function showModifyGame($id) {
-		$this->games = $this->gamesDao->find($id);
-		$game = $this->games[0];
-		require_once 'views/usser/addGame.php';
-	}*/
+	public function showModifyMascota($id) {
+		$this->mascotas = $this->mascotaDao->find($id);
+		$mascota = $this->mascotas[0];
+		require_once 'views/usser/actualizarMascota.php';
+	}
 
-	/*public function updateGame(
+	public function updateMascota(
 		$id,
-		$title,
-		$genders,
-		$rating,
-		$platform,
-		$price
+		$nomMas, 
+        $raza, 
+        $color, 
+        $edad, 
+        $tamano, 
+        $esterilizacion, 
+        $condicion, 
+        $rasgo, 
+        $dueno, 
+        $direccion, 
+        $telefono
 	) {
-		if(empty($title) || 
-		   empty($genders) || 
-		   $rating == "--Choose an option--" ||
-		   empty($platform) ||
-		   empty($price)
+		if(empty($nomMas) || 
+		empty($raza) || 
+		empty($color) ||
+		empty($edad) ||
+		empty($tamano) ||
+		empty($esterilizacion) ||
+		empty($condicion) ||
+		empty($rasgo) ||
+		empty($dueno) ||
+		empty($direccion) ||
+		empty($telefono)
 		) {
 			echo"<script type='text/javascript'>
-    			alert('All fields must be filled');
-    			window.location.href='./edit-game';
+    			alert('Todos los campos deben de ser llenados');
+    			window.location.href='./actualizarMascota.php';
     			</script>";
 		}
 
-		$game = new Game(
-			$title,
-			$genders,
-			$rating,
-			$platform,
-			$price
+		$mascota = new Mascota(
+			$nomMas, 
+			$raza, 
+			$color, 
+			$edad, 
+			$tamano, 
+			$esterilizacion, 
+			$condicion, 
+			$rasgo, 
+			$dueno, 
+			$direccion, 
+			$telefono
 		);
-		$game->setID($id);
+		$mascota->setID($id);
 
-		$this->gamesDao->update($game);
+		$this->mascotaDao->update($mascota);
 		echo"<script type='text/javascript'>
-    		alert('The videogame has been updated');
-    		window.location.href='./games-list';
+    		alert('Los datos de la mascota han sido modificados');
+    		window.location.href='./bienvenida.php';
     		</script>";
 	}
-*/
+
 	public function deleteMascota($id) {
 		$this->mascotas = $this->mascotaDao->find($id);
 		$mascota = $this->mascotas[0];

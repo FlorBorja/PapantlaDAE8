@@ -107,6 +107,11 @@ switch ($url) {
 		$controller->showAll2();
 		break;		
 	
+	case '/views/usser/consultaMascota3':
+		$controller = new MascotaController();
+		$controller->showAll3();
+		break;		
+
 	case '/views/usser/add-institucion':
 		$controller = new InstitucionController();
 		$controller->addNewInstitucion(
@@ -126,23 +131,29 @@ switch ($url) {
 		$controller->showAll();
 		break;	
 		
-	/*case '/usser/edit-game':
-		$controller = new GamesController();
-		$controller->showModifyGame(form('id'));
+	case '/views/usser/actualizarMascota':
+		$controller = new MascotaController();
+		$controller->showModifyMascota(form('id'));
 		break;
 
-	case '/usser/update-game':
-		$controller = new GamesController();
-		$controller->updateGame(
+	case '/views/usser/updateMascota':
+		$controller = new MascotaController();
+		$controller->updateMascota(
 			form('id'),
-			form('title'),
-			form('genders'),
-			form('rating'),
-			form('platform'),
-			form('price')
+			form('nomMas'),
+			form('raza'),
+			form('color'),
+			form('edad'),
+			form('tamano'),
+			form('esterilizacion'),
+			form('condicion'),
+			form('rasgo'),
+			form('dueno'),
+			form('direccion'),
+			form('telefono')
 		);
 		break;
-
+/*
 	case '/usser/search-game':
 		$controller = new GamesController();
 		$controller->searchGame(form('id'));

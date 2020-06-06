@@ -10,7 +10,7 @@
                 <li><a href="">MASCOTA</a>
                     <ul>
 						<li><a href="../usser/addMascota.php">Registrar</a></li>
-						<li><form action="./consultaCallejero"><button><a href="../usser/modificarMascota.php">Modificar Datos</a></button></form></li>
+						<li><form action="./consultaMascota3"><button><a href="../usser/modificarMascota.php">Modificar Datos</a></button></form></li>
 						<li><form action="./consultaMascota"><button><a href="../usser/consultaMascota.php">Consultar</a></button></form></li>
 						<li><form action="./consultaMascota2"><button><a href="../usser/eliminarMascota.php">Eliminar</a></button></form></li>
 					</ul>
