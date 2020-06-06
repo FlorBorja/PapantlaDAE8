@@ -19,12 +19,12 @@ class CallejeroDAO implements DataAccessObject {
             "condCan" => $canino->getCondicion()]);
     }
 
-    public function getCaninos(){
+    /*public function getCaninos(){
         $caninos = array();
         $connection = DataBase::getConnection();
         $sql = "CALL readAllCaninos ()";
         $statement = $connection->prepare($sql);   
-        /*$resultado->bindParam(1,$id, PDO::PARAM_STR);*/
+        /*$resultado->bindParam(1,$id, PDO::PARAM_STR);
         
         try{
             $statement->execute();
@@ -43,16 +43,17 @@ class CallejeroDAO implements DataAccessObject {
     }
 
     public function addCanino($row){
+        $id=$row["id"];
         $calleCan=$row["calleCan"];
         $colCan=$row["colCan"];
         $rasCan=$row["rasCan"];
         $condCan=$row["condCan"];
         
-        return new Callejero($calleCan, $colCan, $rasCan, $condCan);
-    }
+        return new Callejero($id, $calleCan, $colCan, $rasCan, $condCan);
+    }*/
 
 
-    /*public function all() {
+    public function all() {
         $connection = DataBase::getConnection();
         $statement = $connection->prepare("SELECT * FROM canino");
         $statement->execute();
@@ -72,7 +73,7 @@ class CallejeroDAO implements DataAccessObject {
         }
 
         return $caninos;
-    }*/
+    }
 
     public function find($id) {
         $connection = DataBase::getConnection();
@@ -84,6 +85,7 @@ class CallejeroDAO implements DataAccessObject {
         $caninos = [];
         foreach ($result_set as $canino) {
             $new_callejero = new Callejero(
+                $canino['id'],
                 $canino['calleCan'],
                 $canino['colCan'],
                 $canino['rasCan'],
@@ -112,12 +114,12 @@ class CallejeroDAO implements DataAccessObject {
             "condCan" => $canino->getCondicion()
         ]);
     }
-
+*/
     public function delete($canino) {
         $connection = DataBase::getConnection();
         $statement = $connection->prepare("DELETE FROM canino WHERE id=:id");
         $statement->execute([
             "id" => $canino->getID()
         ]);
-    }*/
+    }
 }

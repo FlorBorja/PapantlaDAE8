@@ -49,6 +49,56 @@ class MascotaDAO implements DataAccessObject {
         return $mascotas;
     }*/
 
+    public function getMascotas(){
+        $mascotas = array();
+        $connection = DataBase::getConnection();
+        $sql = "CALL readAllMascotas ()";
+        $statement = $connection->prepare($sql);   
+        /*$resultado->bindParam(1,$id, PDO::PARAM_STR);*/
+        
+        try{
+            $statement->execute();
+            foreach($statement as $row ){
+                $mascotas[] = $this->addMascota($row);
+            }
+            return $mascotas;
+        }  catch(PDOException $e){
+            print "¡Error!: " . $e->getMessage() . "<br/>";
+
+        }finally{
+            $statement=null;
+            $connection=null;
+        }
+        
+    }
+
+    public function addMascota($row){
+        $nomMas=$row["nomMas"];
+        $raza=$row["raza"];
+        $color=$row["color"];
+        $edad=$row["edad"];
+        $tamano=$row["tamano"];
+        $esterilizacion=$row["esterilizacion"];
+        $condicion=$row["condicion"];
+        $rasgo=$row["rasgo"];
+        $dueno=$row["dueno"];
+        $direccion=$row["direccion"];
+        $telefono=$row["telefono"];
+        
+        return new Mascota(
+        $nomMas,
+        $raza,
+        $color,
+        $edad,
+        $tamano,
+        $esterilizacion,
+        $condicion,
+        $rasgo,
+        $dueno,
+        $direccion,
+        $telefono);
+    }
+
     public function find($id) {
         $connection = DataBase::getConnection();
         $statement = $connection->prepare("SELECT * FROM canino WHERE id=:id");

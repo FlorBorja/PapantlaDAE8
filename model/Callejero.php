@@ -8,7 +8,7 @@ class Callejero{
     private $rasCan;
     private $condCan;
 
-    public function __construct(
+    public function __construct(    
         $calleCan, 
         $colCan,
         $rasCan,

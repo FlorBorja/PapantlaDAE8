@@ -19,7 +19,18 @@
                 </tr>
             </thead>
             <tbody>
-
+            <?php foreach ($this->institucion as $i) { ?>
+                <tr>
+                  <td><?php echo $i->getNomInst(); ?></td>
+                  <td><?php echo $i->getDirInst(); ?></td>
+                  <td><?php echo $i->getTelInst(); ?></td>
+                  <td><?php echo $i->getCP(); ?></td>
+                  <td><?php echo $i->getNomRep(); ?></td>
+                  <td><?php echo $i->getCargo(); ?></td>
+                  <td><?php echo $i->getTipoInst(); ?></td>
+                  <td><?php echo $i->getIdeTrib(); ?></td>
+                </tr>
+              <?php } ?> 
             </tbody>
         </table>
     </body>

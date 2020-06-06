@@ -46,6 +46,50 @@ class institucionDAO implements DataAccessObject {
         return $institucions;
     }*/
 
+    public function getInstituciones(){
+        $instituciones = array();
+        $connection = DataBase::getConnection();
+        $sql = "CALL readAllInstituciones ()";
+        $statement = $connection->prepare($sql);   
+        /*$resultado->bindParam(1,$id, PDO::PARAM_STR);*/
+        
+        try{
+            $statement->execute();
+            foreach($statement as $row ){
+                $instituciones[] = $this->addInstitucion($row);
+            }
+            return $instituciones;
+        }  catch(PDOException $e){
+            print "¡Error!: " . $e->getMessage() . "<br/>";
+
+        }finally{
+            $statement=null;
+            $connection=null;
+        }
+        
+    }
+
+    public function addInstitucion($row){
+        $nomInst=$row["nomInst"];
+        $dirInst=$row["dirInst"];
+        $telInst=$row["telInst"];
+        $cp=$row["cp"];
+        $nomRep=$row["nomRep"];
+        $cargo=$row["cargo"];
+        $tipoInst=$row["tipoInst"];
+        $ideTrib=$row["ideTrib"];
+        
+        return new Institucion(
+        $nomInst,
+        $dirInst,
+        $telInst,
+        $cp,
+        $nomRep,
+        $cargo,
+        $tipoInst,
+        $ideTrib);
+    }
+
     public function find($id) {
         $connection = DataBase::getConnection();
         $statement = $connection->prepare("SELECT * FROM canino WHERE id=:id");

@@ -74,6 +74,12 @@ class InstitucionController {
     		</script>";
 	}
 
+	public function showInstituciones(){
+		$this->institucion = $this->institucionDao->getInstituciones();
+		require_once 'views\usser\consultaInstitucion.php'	;
+    }
+
+
 	/*public function showModifyGame($id) {
 		$this->games = $this->gamesDao->find($id);
 		$game = $this->games[0];

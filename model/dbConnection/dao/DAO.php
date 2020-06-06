@@ -2,8 +2,7 @@
 
 require_once 'model/dbConnection/connection.php';
 
-interface DataAccessObject
-{
+interface DataAccessObject {
     //function all();
     function find($idUs);
     //function delete($id);

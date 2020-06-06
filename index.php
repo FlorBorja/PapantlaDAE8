@@ -40,7 +40,7 @@ switch ($url) {
 		);
 		break;
 
-	case '/views/logout':
+	case '/views/usser/logout':
 		$controller = new UsuarioController();
 		$controller->logout();
 		break;
@@ -55,10 +55,20 @@ switch ($url) {
 		$controller->showRegistrarCallejero();
 		break;*/
 
-	case '/views/usser/traer-caninos':
+	case '/views/usser/consultaCallejero':
 		$controller = new CallejeroController();
-		$controller->showCallejeros();
+		$controller->showAll();
 		break;	
+
+	case '/views/usser/consultaCallejero2':
+		$controller = new CallejeroController();
+		$controller->showAll2();
+		break;	
+
+	/*case '/views/usser/consultaCallejero2':
+		$controller = new CallejeroController();
+		$controller->showCallejeros2();
+		break;*/
 
 	case '/views/usser/add-canino':
 		$controller = new CallejeroController();
@@ -86,6 +96,11 @@ switch ($url) {
 			form('telefono')
 		);
 		break;
+
+	case '/views/usser/consultaMascota':
+		$controller = new MascotaController();
+		$controller->showMascotas();
+		break;	
 	
 	case '/views/usser/add-institucion':
 		$controller = new InstitucionController();
@@ -99,6 +114,11 @@ switch ($url) {
 			form('tipoInst'),
 			form('ideTrib')
 		);
+		break;
+
+	case '/views/usser/consultaInstitucion':
+		$controller = new InstitucionController();
+		$controller->showInstituciones();
 		break;
 		
 	/*case '/usser/edit-game':
@@ -121,13 +141,15 @@ switch ($url) {
 	case '/usser/search-game':
 		$controller = new GamesController();
 		$controller->searchGame(form('id'));
+		break;*/
+
+	case '/views/usser/adoptarCallejero':
+		$controller = new CallejeroController();
+		$controller->deleteCallejero(form('id'));
 		break;
 
-	case '/usser/delete-game':
-		$controller = new GamesController();
-		$controller->deleteGame(form('id'));
-		break;
-
+	
+/*
 	case '/usser/remove-game':
 		$controller = new GamesController();
     

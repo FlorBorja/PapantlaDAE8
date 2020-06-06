@@ -83,6 +83,11 @@ class MascotaController {
     		</script>";
 	}
 
+	public function showMascotas(){
+		$this->mascota = $this->mascotaDao->getMascotas();
+		require_once 'views\usser\consultaMascota.php'	;
+    }
+
 	/*public function showModifyGame($id) {
 		$this->games = $this->gamesDao->find($id);
 		$game = $this->games[0];
