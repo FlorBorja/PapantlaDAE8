@@ -18,7 +18,7 @@
                     <ul>
 						<li><a href="../usser/addCallejero.php">Registrar</a></li>
 						<li>
-							<form action="./consultaCallejero"><button type="submit" value="Consultar"></button></form>
+							<form action="./consultaCallejero"><button type="submit" value="Consultar">CONSULTAR</button></form>
 						</li>
 						<li><a href="../usser/adoptarCallejero.php">Adoptar</a></li>
 					</ul>
