@@ -5,7 +5,7 @@
         <LINK href="../assets/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-    <div id="menu">
+        <div id="menu">
 			<ul class="nav">
                 <li><a href="">MASCOTA</a>
                     <ul>

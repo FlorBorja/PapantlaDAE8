@@ -42,6 +42,17 @@ ul, ol {
    margin-top: 3px;
 }
 
+.nav li button a {
+   z-index:0 !important;
+   background-color:#8AAD9F;
+   color:#36362C;
+   text-decoration:none;
+   padding:10px 12px;
+   display:block;/*Esto hace que se despliegue el menu en lista*/
+   border-radius: 15px;
+   margin-top: 3px;
+}
+
 .nav li ul {
    display:none;
    position:relative;

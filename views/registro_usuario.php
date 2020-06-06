@@ -9,10 +9,10 @@
         <div id="rectangle">
             <form action="./registro_usuario/create-account" method="POST">
                 <label>Nombre de Usuario:</label>
-                <input type="text" name="nomUs" required/>
+                <input type="text" name="nomUs" autocomplete="off" required/>
                 <br>
                 <label>Password:</label>
-                <input type="text" name="passUs" required/>
+                <input type="text" name="passUs" autocomplete="off" required/>
                 <button type="submit" id="enviar_formulario">REGISTRAR</button>
             </form>
             <button id="volver">
