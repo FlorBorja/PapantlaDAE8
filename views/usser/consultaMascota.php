@@ -35,8 +35,8 @@
                   <td><?php echo $m->getCondicion(); ?></td>
                   <td><?php echo $m->getRasgo(); ?></td>
                   <td><?php echo $m->getDueno(); ?></td>
-                  <td><?php echo $m->getDireccion(); ?></td>
                   <td><?php echo $m->getTelefono(); ?></td>
+                  <td><?php echo $m->getDireccion(); ?></td>
                 </tr>
               <?php } ?> 
             </tbody>
