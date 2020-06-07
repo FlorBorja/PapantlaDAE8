@@ -24,7 +24,7 @@ class InstitucionController {
 	public function showAll2() {
 		$this->institucion = $this->institucionDao->all();
 		$search = false; 
-		require_once 'views/usser/actualizarInstitucion.php';
+		require_once 'views/usser/modificarInstitucion.php';
 	}
 
 	/*public function showAll() {
@@ -93,39 +93,48 @@ class InstitucionController {
 		require_once 'views/usser/addInstitucion.php';
 	}
 
-	/*public function updateGame(
+	public function updateInstitucion(
 		$id,
-		$title,
-		$genders,
-		$rating,
-		$platform,
-		$price
+		$nomInst,
+		$dirInst,
+		$telInst,
+		$cp,
+		$nomRep,
+		$cargo,
+		$tipoInst,
+		$ideTrib
 	) {
-		if(empty($title) || 
-		   empty($genders) || 
-		   $rating == "--Choose an option--" ||
-		   empty($platform) ||
-		   empty($price)
+		if(empty($nomInst) || 
+		   empty($dirInst) || 
+           empty($telInst) ||
+           empty($cp) ||
+           empty($nomRep) ||
+           empty($cargo) ||
+           empty($tipoInst) ||
+           empty($ideTrib) 
 		) {
 			echo"<script type='text/javascript'>
-    			alert('All fields must be filled');
-    			window.location.href='./edit-game';
+    			alert('Todos los campos deben de ser llenados');
+    			window.location.href='./bienvenida.php';
     			</script>";
 		}
 
-		$game = new Game(
-			$title,
-			$genders,
-			$rating,
-			$platform,
-			$price
+		$institucion = new Institucion(
+			$nomInst,
+            $dirInst,
+            $telInst,
+            $cp,
+            $nomRep,
+            $cargo,
+            $tipoInst,
+            $ideTrib
 		);
-		$game->setID($id);
+		$institucion->setID($id);
 
-		$this->gamesDao->update($game);
+		$this->institucionDao->update($institucion);
 		echo"<script type='text/javascript'>
-    		alert('The videogame has been updated');
-    		window.location.href='./games-list';
+    		alert('Los datos de la institucion han sido modificados');
+    		window.location.href='./bienvenida.php';
     		</script>";
-	}*/
+	}
 }

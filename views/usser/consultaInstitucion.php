@@ -13,10 +13,10 @@
                     <th>Dirección</th>
                     <th>Teléfono</th>
                     <th>CP</th>
-                    <th>Tipo de Institución</th>
-                    <th>Identificación Tributaria</th>
                     <th>Nombre Representante</th>
                     <th>Cargo Representante</th>
+                    <th>Tipo de Institución</th>
+                    <th>Identificación Tributaria</th>
                 </tr>
             </thead>
             <tbody>

@@ -75,21 +75,25 @@ class institucionDAO implements DataAccessObject {
 
         return $instituciones;
     }
-    /*
+    
     public function update($institucion) {
         $connection = DataBase::getConnection();
 
-        $sql  = "UPDATE canino ";
-        $sql .= "SET nomInst=:nomInst, dirInst=:dirInst, telInst=:telInst, cp=:cp";
+        $sql  = "UPDATE institucion ";
+        $sql .= "SET nomInst=:nomInst, dirInst=:dirInst, telInst=:telInst,cp=:cp, nomRep=:nomRep, cargo=:cargo, tipoInst=:tipoInst, ideTrib=:ideTrib)";
         $sql .= "WHERE id=:id";
-
+        
         $statement = $connection->prepare($sql);
         $statement->execute([
             "id" => $institucion->getID(),
-            "nomInst" => $institucion->getnomInst(),
-            "dirInst" => $institucion->getdirInst(),
-            "telInst" => $institucion->gettelInst(),
-            "cp" => $institucion->getcp()
+            "nomInst"  => $institucion->getNomInst(),
+            "dirInst" => $institucion->getDirInst(),
+            "telInst" => $institucion->getTelInst(),
+            "cp" => $institucion->getCP(),
+            "nomRep" => $institucion->getNomRep(),
+            "cargo" => $institucion->getCargo(),
+            "tipoInst" => $institucion->getTipoInst(),
+            "ideTrib" => $institucion->getIdeTrib()
         ]);
-    }*/
+    }
 }

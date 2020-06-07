@@ -173,6 +173,21 @@ switch ($url) {
 			form('telefono')
 		);
 		break;
+
+	case '/views/usser/updateInstitucion':
+		$controller = new InstitucionController();
+		$controller->updateInstitucion(
+			form('id'),
+			form('nomInst'),
+			form('dirInst'),
+			form('telInst'),
+			form('cp'),
+			form('nomRep'),
+			form('cargo'),
+			form('tipoInst'),
+			form('ideTrib')
+		);
+		break;
 /*
 	case '/usser/search-game':
 		$controller = new GamesController();

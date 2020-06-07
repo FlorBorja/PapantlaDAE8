@@ -52,26 +52,3 @@ CREATE TABLE institucion(
 
     PRIMARY KEY (id) 
 );
-
-Delimiter $$
-CREATE PROCEDURE readAllCaninos()
-BEGIN
-	SELECT *
-    FROM canino;
-END $$
-
-Delimiter $$
-CREATE PROCEDURE readAllMascotas()
-BEGIN
-	SELECT *
-    FROM mascota;
-END $$ 
-
-Delimiter $$
-CREATE PROCEDURE readAllInstituciones()
-BEGIN
-	SELECT *
-    FROM institucion;
-END$$
-
-Delimiter ;
