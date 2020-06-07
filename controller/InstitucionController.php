@@ -21,6 +21,12 @@ class InstitucionController {
 		require_once 'views/usser/consultaInstitucion.php';
 	}
 
+	public function showAll2() {
+		$this->institucion = $this->institucionDao->all();
+		$search = false; 
+		require_once 'views/usser/actualizarInstitucion.php';
+	}
+
 	/*public function showAll() {
 		$this->caninos = $this->institucionDao->all();
 		$search = false; 
@@ -32,11 +38,11 @@ class InstitucionController {
 		$search = true;
 		require_once 'views/usser/consultaCallejero.php';
 	}
-
-	public function showRegistrarCallejero() {
-		$canino = new Callejero(null, null, null, null); 
-		require_once '/PAPANTLADAE8/views/usser/addCallejero.php';
-	}*/
+*/
+	public function showRegisterInstitucion() {
+		$institucion = new Institucion(null, null, null, null, null, null, null, null); 
+		require_once 'views/usser/addInstitucion.php';
+	}
 
 	public function addNewInstitucion(
         $nomInst,
@@ -81,11 +87,11 @@ class InstitucionController {
 	}
 
 
-	/*public function showModifyGame($id) {
-		$this->games = $this->gamesDao->find($id);
-		$game = $this->games[0];
-		require_once 'views/usser/addGame.php';
-	}*/
+	public function showModifyInstitucion($id) {
+		$this->institucion = $this->institucionDao->find($id);
+		$institucion = $this->institucion[0];
+		require_once 'views/usser/addInstitucion.php';
+	}
 
 	/*public function updateGame(
 		$id,

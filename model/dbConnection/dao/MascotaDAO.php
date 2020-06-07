@@ -88,17 +88,24 @@ class MascotaDAO implements DataAccessObject {
     public function update($mascota) {
         $connection = DataBase::getConnection();
 
-        $sql  = "UPDATE canino ";
-        $sql .= "SET nomMas=:nomMas, raza=:raza, color=:color, edad=:edad";
+        $sql  = "UPDATE mascota ";
+        $sql .= "SET nomMas=:nomMas, raza=:raza, color=:color, edad=:edad, tamano=:tamano, esterilizacion=:esterilizacion, condicion=:condicion, rasgo=:rasgo, dueno=:dueno, direccion=:direccion, telefono=:telefono ";
         $sql .= "WHERE id=:id";
 
         $statement = $connection->prepare($sql);
         $statement->execute([
             "id" => $mascota->getID(),
-            "nomMas" => $mascota->getNomMas(),
+            "nomMas"  => $mascota->getNomMas(),
             "raza" => $mascota->getRaza(),
             "color" => $mascota->getColor(),
-            "edad" => $mascota->getEdad()
+            "edad" => $mascota->getEdad(),
+            "tamano" => $mascota->getTamano(),
+            "esterilizacion" => $mascota->getEsterilizacion(),
+            "condicion" => $mascota->getCondicion(),
+            "rasgo" => $mascota->getRasgo(),
+            "dueno" => $mascota->getDueno(),
+            "direccion" => $mascota->getDireccion(),
+            "telefono" => $mascota->getTelefono()
         ]);
     }
 

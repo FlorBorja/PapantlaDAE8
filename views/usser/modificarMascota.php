@@ -24,23 +24,23 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach ($this->mascota as $m) { ?>
+            <?php foreach ($this->mascota as $mascota) { ?>
                 <tr>
-                  <td><?php echo $m->getID(); ?></td>
-                  <td><?php echo $m->getNomMas(); ?></td>
-                  <td><?php echo $m->getRaza(); ?></td>
-                  <td><?php echo $m->getColor(); ?></td>
-                  <td><?php echo $m->getEdad(); ?></td>
-                  <td><?php echo $m->getTamano(); ?></td>
-                  <td><?php echo $m->getEsterilizacion(); ?></td>
-                  <td><?php echo $m->getCondicion(); ?></td>
-                  <td><?php echo $m->getRasgo(); ?></td>
-                  <td><?php echo $m->getDueno(); ?></td>
-                  <td><?php echo $m->getDireccion(); ?></td>
-                  <td><?php echo $m->getTelefono(); ?></td>
-                  <td><form action="./actualizarMascota">
-						<input type="submit" value="Editar" >
-						<input type="hidden" name="id" value="<?= $m->getID(); ?>">
+                  <td><?php echo $mascota->getID(); ?></td>
+                  <td><?php echo $mascota->getNomMas(); ?></td>
+                  <td><?php echo $mascota->getRaza(); ?></td>
+                  <td><?php echo $mascota->getColor(); ?></td>
+                  <td><?php echo $mascota->getEdad(); ?></td>
+                  <td><?php echo $mascota->getTamano(); ?></td>
+                  <td><?php echo $mascota->getEsterilizacion(); ?></td>
+                  <td><?php echo $mascota->getCondicion(); ?></td>
+                  <td><?php echo $mascota->getRasgo(); ?></td>
+                  <td><?php echo $mascota->getDueno(); ?></td>
+                  <td><?php echo $mascota->getDireccion(); ?></td>
+                  <td><?php echo $mascota->getTelefono(); ?></td>
+                  <td><form action="./actualizarMascota" method="POST">
+						<input type="submit" name="edit<?= $mascota->getID(); ?>" value="Editar">
+						<input type="hidden" name="id" value="<?= $mascota->getID(); ?>">
 					    </form>
                   </td>
                 </tr>

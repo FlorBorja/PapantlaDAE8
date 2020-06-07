@@ -44,11 +44,11 @@ class MascotaController {
 		$search = true;
 		require_once 'views/usser/consultaCallejero.php';
 	}
-
-	public function showRegistrarCallejero() {
-		$canino = new Callejero(null, null, null, null); 
-		require_once '/PAPANTLADAE8/views/usser/addCallejero.php';
-	}*/
+*/
+	public function showRegisterMascota() {
+		$mascota = new Mascota(null, null, null, null, null, null, null, null, null, null, null); 
+		require_once 'views/usser/addMascota.php';
+	}
 
 	public function addNewMascota(
         $nomMas,
@@ -77,7 +77,7 @@ class MascotaController {
 		) {
 			echo"<script type='text/javascript'>
     			alert('Todos los campos deben de ser llenados');
-    			window.location.href='./addMascota.php';
+    			window.location.href='./bienvenida.php';
     			</script>";
 		}
 
@@ -101,15 +101,10 @@ class MascotaController {
     		</script>";
 	}
 
-	public function showMascotas(){
-		$this->mascota = $this->mascotaDao->getMascotas();
-		require_once 'views\usser\consultaMascota.php'	;
-    }
-
 	public function showModifyMascota($id) {
-		$this->mascotas = $this->mascotaDao->find($id);
-		$mascota = $this->mascotas[0];
-		require_once 'views/usser/actualizarMascota.php';
+		$this->mascota = $this->mascotaDao->find($id);
+		$mascota = $this->mascota[0];
+		require_once 'views/usser/addMascota.php';
 	}
 
 	public function updateMascota(
@@ -167,8 +162,8 @@ class MascotaController {
 	}
 
 	public function deleteMascota($id) {
-		$this->mascotas = $this->mascotaDao->find($id);
-		$mascota = $this->mascotas[0];
+		$this->mascota = $this->mascotaDao->find($id);
+		$mascota = $this->mascota[0];
 		$this->mascotaDao->delete($mascota);
 		echo"<script type='text/javascript'>
     		alert('La mascota ha muerto');

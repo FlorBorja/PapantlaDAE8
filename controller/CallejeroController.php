@@ -63,7 +63,7 @@ class CallejeroController {
 		$this->callejeroDao->delete($canino);
 		echo"<script type='text/javascript'>
     		alert('El canino ha sido adoptado, favor de registrar a su nueva MASCOTA');
-    		window.location.href='./addMascota.php';
+    		window.location.href='./bienvenida.php';
     		</script>";	
 	}
 }

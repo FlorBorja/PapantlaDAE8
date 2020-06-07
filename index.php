@@ -55,6 +55,16 @@ switch ($url) {
 		$controller->showRegistrarCallejero();
 		break;*/
 
+	case '/views/usser/registrarMascota':
+		$controller = new MascotaController();
+		$controller->showRegisterMascota();
+		break;
+		
+	case '/views/usser/registrarInstitucion':
+		$controller = new InstitucionController();
+		$controller->showRegisterInstitucion();
+		break;	
+
 	case '/views/usser/consultaCallejero':
 		$controller = new CallejeroController();
 		$controller->showAll();
@@ -129,12 +139,22 @@ switch ($url) {
 	case '/views/usser/consultaInstitucion':
 		$controller = new InstitucionController();
 		$controller->showAll();
-		break;	
+		break;
+		
+	case '/views/usser/consultaInstitucion2':
+		$controller = new InstitucionController();
+		$controller->showAll2();
+		break;
 		
 	case '/views/usser/actualizarMascota':
 		$controller = new MascotaController();
 		$controller->showModifyMascota(form('id'));
 		break;
+
+		case '/views/usser/actualizarInstitucion':
+			$controller = new InstitucionController();
+			$controller->showModifyInstitucion(form('id'));
+			break;
 
 	case '/views/usser/updateMascota':
 		$controller = new MascotaController();

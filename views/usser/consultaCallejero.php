@@ -9,7 +9,7 @@
 			<ul class="nav">
                 <li><a href="">MASCOTA</a>
                     <ul>
-						<li><a href="../usser/addMascota.php">Registrar</a></li>
+						<li><form action="./registrarMascota"><button><a href="../usser/addMascota.php">Registrar</a></button></form></li>
 						<li><form action="./consultaMascota3"><button><a href="../usser/modificarMascota.php">Modificar Datos</a></button></form></li>
 						<li><form action="./consultaMascota"><button><a href="../usser/consultaMascota.php">Consultar</a></button></form></li>
 						<li><form action="./consultaMascota2"><button><a href="../usser/eliminarMascota.php">Eliminar</a></button></form></li>
@@ -25,8 +25,8 @@
 				<li><a href="">INSTITUCI&Oacute;N</a>
                     <ul>
                         <li><form action="./consultaInstitucion"><button><a href="../usser/consultaInstitucion.php">Consultar</a></button></form></li>
-						<li><a href="../usser/addInstitucion.php">Registrar</a></li>
-						<li><form action="./consultaCallejero"><button><a href="../usser/modificarInstitucion.php">Modificar Datos</a></button></form></li>
+						<li><form action="./registrarInstitucion"><button><a href="../usser/addInstitucion.php">Registrar</a></button></form></li>
+						<li><form action="./consultaInstitucion2"><button><a href="../usser/modificarInstitucion.php">Modificar Datos</a></button></form></li>
 					</ul>
                 </li>
 				<li><form action="./logout"><button><a href="">CERRAR SESI&Oacute;N</a></button></form></li>
