@@ -1,7 +1,7 @@
-<LINK href="../assets/css/menu.css" rel="stylesheet" type="text/css"/>
+<!--LINK href="../assets/css/menu.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript">
     function confirmLogout() {
-            if(confirm('Do you want log out?')) {
+            if(confirm('¿Deseas cerrar sesión?')) {
                 return true;
             }
             else {
@@ -15,5 +15,5 @@
 						<input type="submit" value="Log out" onclick="return confirmLogout()">
 					</form>
 			</ul>
-		</div>
+		</div-->
 

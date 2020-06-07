@@ -3,6 +3,17 @@
         <title>Puppy Rescue: Consulta de Callejeros</title>
         <link href="../assets/css/consulta_callejero.css" rel="stylesheet" type="text/css">
         <LINK href="../assets/css/menu.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript">
+			function confirmLogout() {
+				if(confirm('¿Deseas cerrar sesion?')) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+
+		</script>
     </head>
     <body>
         <div id="menu">
@@ -29,7 +40,12 @@
 						<li><form action="./consultaInstitucion2"><button><a href="../usser/modificarInstitucion.php">Modificar Datos</a></button></form></li>
 					</ul>
                 </li>
-				<li><form action="./logout"><button><a href="">CERRAR SESI&Oacute;N</a></button></form></li>
+				<li>
+                    <form action="./logout" method="POST">
+						<button type="submit" value="Log out" onclick="return confirmLogout()">Cerrar Sesion</button>
+					</form>
+                    <!--form action="./logout"><button><a href="">CERRAR SESI&Oacute;N</a></button></form-->
+                </li>
 			</ul>
 		</div>
         <table>
