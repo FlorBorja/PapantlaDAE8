@@ -151,10 +151,10 @@ switch ($url) {
 		$controller->showModifyMascota(form('id'));
 		break;
 
-		case '/views/usser/actualizarInstitucion':
-			$controller = new InstitucionController();
-			$controller->showModifyInstitucion(form('id'));
-			break;
+	case '/views/usser/actualizarInstitucion':
+		$controller = new InstitucionController();
+		$controller->showModifyInstitucion(form('id'));
+		break;
 
 	case '/views/usser/updateMascota':
 		$controller = new MascotaController();

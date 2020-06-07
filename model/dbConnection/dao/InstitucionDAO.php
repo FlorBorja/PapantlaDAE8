@@ -80,7 +80,7 @@ class institucionDAO implements DataAccessObject {
         $connection = DataBase::getConnection();
 
         $sql  = "UPDATE institucion ";
-        $sql .= "SET nomInst=:nomInst, dirInst=:dirInst, telInst=:telInst,cp=:cp, nomRep=:nomRep, cargo=:cargo, tipoInst=:tipoInst, ideTrib=:ideTrib)";
+        $sql .= "SET nomInst=:nomInst, dirInst=:dirInst, telInst=:telInst, cp=:cp, nomRep=:nomRep, cargo=:cargo, tipoInst=:tipoInst, ideTrib=:ideTrib ";
         $sql .= "WHERE id=:id";
         
         $statement = $connection->prepare($sql);
