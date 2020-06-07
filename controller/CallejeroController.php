@@ -7,7 +7,7 @@ class CallejeroController {
 
 	private $auth;
 	private $callejeroDao;
-	private $caninos;
+	private $canino;
 
 	public function __construct() {
 		$this->auth = new Auth();
@@ -27,6 +27,11 @@ class CallejeroController {
 		require_once 'views/usser/adoptarCallejero.php';
 	}
 
+	public function showRegisterCallejero() {
+		$canino = new Callejero(null, null, null, null); 
+		require_once 'views/usser/addCallejero.php';
+	}
+
 	public function addNewCallejero(
 		$calleCan,
 		$colCan,
@@ -39,8 +44,8 @@ class CallejeroController {
 		   empty($condCan)
 		) {
 			echo"<script type='text/javascript'>
-    			alert('All fields must be filled');
-    			window.location.href='./addCallejero.php';
+    			alert('Todos los campos deben de ser llenados');
+    			window.location.href='./bienvenido.php';
     			</script>";
 		}
 
@@ -58,8 +63,8 @@ class CallejeroController {
 	}
 
 	public function deleteCallejero($id) {
-		$this->caninos = $this->callejeroDao->find($id);
-		$canino = $this->caninos[0];
+		$this->canino = $this->callejeroDao->find($id);
+		$canino = $this->canino[0];
 		$this->callejeroDao->delete($canino);
 		echo"<script type='text/javascript'>
     		alert('El canino ha sido adoptado, favor de registrar a su nueva MASCOTA');

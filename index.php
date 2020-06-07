@@ -48,12 +48,12 @@ switch ($url) {
 	/*case '/usser/games-list':
 		$controller = new GamesController();
 		$controller->showAll();
-		break;
-
-	case '/views/usser/consultaCallejero':
-		$controller = new CallejeroController();
-		$controller->showRegistrarCallejero();
 		break;*/
+
+	case '/views/usser/registrarCallejero':
+		$controller = new CallejeroController();
+		$controller->showRegisterCallejero();
+		break;
 
 	case '/views/usser/registrarMascota':
 		$controller = new MascotaController();

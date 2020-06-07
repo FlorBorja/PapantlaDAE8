@@ -20,24 +20,24 @@
 			<ul class="nav">
                 <li><a href="">MASCOTA</a>
                     <ul>
-						<li><form action="./registrarMascota"><button><a href="../usser/addMascota.php">Registrar</a></button></form></li>
-						<li><form action="./consultaMascota3"><button><a href="../usser/modificarMascota.php">Modificar Datos</a></button></form></li>
-						<li><form action="./consultaMascota"><button><a href="../usser/consultaMascota.php">Consultar</a></button></form></li>
-						<li><form action="./consultaMascota2"><button><a href="../usser/eliminarMascota.php">Eliminar</a></button></form></li>
+						<li><form action="./registrarMascota"><button>Registrar</button></form></li>
+						<li><form action="./consultaMascota3"><button>Modificar Datos</button></form></li>
+						<li><form action="./consultaMascota" ><button>Consultar</button></form></li>
+						<li><form action="./consultaMascota2"><button>Eliminar</button></form></li>
 					</ul>
                 </li>
                 <li><a href="">CALLEJERO</a>
                     <ul>
-						<li><a href="../usser/addCallejero.php">Registrar</a></li>
-						<li><form action="./consultaCallejero"><button type="submit" value="Consultar">Consultar</button></form><!--form action="./consultaCallejero"><button><a href="../usser/consultaCallejero.php">Consultar</a></button></form--></li>
-						<li><form action="./consultaCallejero2"><button><a href="../usser/adoptarCallejero.php">Adoptar</a></button></form></li>
+						<li><form action="./registrarCallejero"><button>Registrar</button></form></li>
+						<li><form action="./consultaCallejero"> <button>Consultar</button></form></li>
+						<li><form action="./consultaCallejero2"><button>Adoptar</button></form></li>
 					</ul>
                 </li>
 				<li><a href="">INSTITUCI&Oacute;N</a>
                     <ul>
-                        <li><form action="./consultaInstitucion"><button><a href="../usser/consultaInstitucion.php">Consultar</a></button></form></li>
-						<li><form action="./registrarInstitucion"><button><a href="../usser/addInstitucion.php">Registrar</a></button></form></li>
-						<li><form action="./consultaInstitucion2"><button><a href="../usser/modificarInstitucion.php">Modificar Datos</a></button></form></li>
+                        <li><form action="./consultaInstitucion"><button>Consultar</button></form></li>
+						<li><form action="./registrarInstitucion"><button>Registrar</button></form></li>
+						<li><form action="./consultaInstitucion2"><button>Modificar Datos</button></form></li>
 					</ul>
                 </li>
 				<li>
