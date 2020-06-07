@@ -2,6 +2,17 @@
     <head>
         <title>Puppy Rescue: Eliminar Mascotas</title>
         <link href="../assets/css/eliminar_mascota.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+			function confirmLogout() {
+				if(confirm('¿Deseas cerrar sesion?')) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+
+		</script>
     </head>
     <script type="text/javascript">
     function confirmDelete() {

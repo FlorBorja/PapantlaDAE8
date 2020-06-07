@@ -2,6 +2,17 @@
     <head>
         <title>Puppy Rescue: Consulta de Mascotas</title>
         <link href="../assets/css/consulta_institucion.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+			function confirmLogout() {
+				if(confirm('¿Deseas cerrar sesion?')) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+
+		</script>
     </head>
     <body>
         <?php include_once '../menu.php' ?>
