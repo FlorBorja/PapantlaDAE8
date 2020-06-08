@@ -1,117 +1,48 @@
 #menu{
-   text-align: center;/*Alinea todo el menu al centro*/
-   padding-top: 3rem;/*Espacio superior de todo el menu*/
-   padding-bottom: 3rem;/*Espacio inferior de todo el menu*/
-   padding-left: 10rem;/*Espacio lateral izquierdo de todo el menu*/
-}
-
-#menu li button{
-   padding: 0rem 1.5rem 0rem 1.5rem;/*margenes en todos los enlaces */
-   color: #36362C;/*Color de la letra del enlace*/
-   background-color:#8AAD9F;/*Color del fondo*/
-   text-decoration: none;/*Eliminar subrayado*/
-   border-radius: 15px;/*Borde redondeado*/
-   font-size: 20px;/*Tamaño de la letra*/
-   margin-bottom: -16px;
-}
-
-#menu li{
-   display: inline;/*Alinear la lista*/
-   text-align: center;/*Alinea los "li" al centro*/
-   margin: 0 .625rem 0 0;/*Margenes de los "li" del menu*/
-}
-
-#menu li a {/*Para todos los enlaces dentro de un "li" del menu*/
-   padding: .563rem 2.5rem .563rem 2.5rem;/*margenes en todos los enlaces */
-   color: #36362C;/*Color de la letra del enlace*/
-   background-color:#8AAD9F;/*Color del fondo*/
-   text-decoration: none;/*Eliminar subrayado*/
-   border-radius: 15px;/*Borde redondeado*/
-   font-size: 20px;/*Tamaño de la letra*/
-   margin: 0px 0px 0px 0px;
-}
-
-#menu li button {/*Para todos los botones dentro de un "li" del menu*/
-   padding: 0rem 1.5rem 0rem 1.5rem;/*margenes en todos los enlaces */
-   color: #36362C;/*Color de la letra del enlace*/
-   background-color:#8AAD9F;/*Color del fondo*/
-   text-decoration: none;/*Eliminar subrayado*/
-   border-radius: 15px;/*Borde redondeado*/
-   font-size: 20px;/*Tamaño de la letra*/
-   margin-bottom: -16px;
-}
-
-ul{/*Para los "ul"*/
-   list-style:none;/*Elimina simbolos para la lista*/
-}
-
-.nav > li {
-   padding:10px 10px 0px 10px;
-   float:left;
-   margin: 70px;
-   margin-top:-50px;
-}
-
-.nav li a {
-   z-index:0 !important;
-   /*background-color:#8AAD9F;*/
-   color:#36362C;
-   text-decoration:none;
-   padding:10px 12px;
-   display:block;/*Esto hace que se despliegue el menu en lista*/
-   border-radius: 15px;
-   margin-top: 3px;
-}
-
-.nav li ul {/*Evita que se mueva el menu al desplegar las opciones*/
-   display:none;
-   position:relative;
-   min-width:140px;
-}
-
-.nav li:hover > ul {/*Hace que se desplieguen los submenus*/
-   display:block;
-}
-
-.nav li ul li {/*Muestra los submenus al poner el mouse sobre una opcion*/
-   position:relative;
-}
-
-.nav li ul li ul {
-   right:0px;
-   top:0px;
-}
-
-
-
-
-
-
-
-/*#menu{
    text-align: center;
    padding-top: 3rem;
    padding-bottom: 3rem;
    padding-left: 10rem;
 }
 
+#menu li button{
+   padding: 0rem 1.5rem 0rem 1.5rem;
+   color: #36362C;
+   background-color:#8AAD9F;
+   text-decoration: none;
+   border-radius: 15px;
+   font-size: 20px;
+   margin-bottom: -16px;
+}
+
 #menu li{
-   display: inline;/*Alinear la lista
+   display: inline;
    text-align: center;
    margin: 0 .625rem 0 0;
 }
 
 #menu li a {
-   padding: .563rem 2.5rem .563rem 2.5rem;/*top,right,bottom,left 
+   padding: .563rem 2.5rem .563rem 2.5rem;
    color: #36362C;
    background-color:#8AAD9F;
-   text-decoration: none;/*Eliminar subrayado
+   text-decoration: none;
    border-radius: 15px;
    font-size: 20px;
+   margin: 0px 0px 0px 0px;
 }
 
-ul, ol {
-   list-style:none;/*Elimina simbolos para la lista
+#menu li button {
+   padding: 0rem 1.5rem 0rem 1.5rem;
+   color: #36362C;
+   background-color:#8AAD9F;
+   text-decoration: none;
+   border-radius: 15px;
+   font-size: 20px;
+   margin-bottom: -16px;
+}
+
+ul{
+   list-style:none;
 }
 
 .nav > li {
@@ -123,22 +54,10 @@ ul, ol {
 
 .nav li a {
    z-index:0 !important;
-   background-color:#8AAD9F;
    color:#36362C;
    text-decoration:none;
    padding:10px 12px;
-   display:block;/*Esto hace que se despliegue el menu en lista
-   border-radius: 15px;
-   margin-top: 3px;
-}
-
-.nav li button a {
-   z-index:0 !important;
-   background-color:#8AAD9F;
-   color:#36362C;
-   text-decoration:none;
-   padding:10px 12px;
-   display:block;/*Esto hace que se despliegue el menu en lista
+   display:block;
    border-radius: 15px;
    margin-top: 3px;
 }

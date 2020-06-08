@@ -54,7 +54,6 @@
                     <form action="./logout" method="POST">
 						<button type="submit" value="Log out" onclick="return confirmLogout()">Cerrar Sesion</button>
 					</form>
-                    <!--form action="./logout"><button><a href="">CERRAR SESI&Oacute;N</a></button></form-->
                 </li>
 			</ul>
 		</div>
