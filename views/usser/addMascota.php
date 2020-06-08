@@ -1,5 +1,3 @@
-<?php $GLOBALS['page_name'] = 'addMascota'; ?>
-
 <html>
     <head>
         <title>Puppy Rescue: Registro de Mascota</title>

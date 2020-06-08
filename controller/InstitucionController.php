@@ -27,18 +27,6 @@ class InstitucionController {
 		require_once 'views/usser/modificarInstitucion.php';
 	}
 
-	/*public function showAll() {
-		$this->caninos = $this->institucionDao->all();
-		$search = false; 
-		require_once 'views/usser/consultaCallejero.php';
-	}
-
-	public function searchCallejero($id) {
-		$this->caninos = $this->institucionDao->find($id);
-		$search = true;
-		require_once 'views/usser/consultaCallejero.php';
-	}
-*/
 	public function showRegisterInstitucion() {
 		$institucion = new Institucion(null, null, null, null, null, null, null, null); 
 		require_once 'views/usser/addInstitucion.php';
@@ -82,7 +70,7 @@ class InstitucionController {
 		$this->institucionDao->create($institucion);
 		echo"<script type='text/javascript'>
     		alert('La institucion ha sido registrada correctamente');
-    		window.location.href='./addInstitucion.php';
+    		window.location.href='./bienvenida.php';
     		</script>";
 	}
 

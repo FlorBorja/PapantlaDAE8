@@ -33,18 +33,6 @@ class MascotaController {
 		require_once 'views/usser/modificarMascota.php';
 	}
 
-	/*public function showAll() {
-		$this->caninos = $this->mascotaDao->all();
-		$search = false; 
-		require_once 'views/usser/consultaCallejero.php';
-	}
-
-	public function searchCallejero($id) {
-		$this->caninos = $this->mascotaDao->find($id);
-		$search = true;
-		require_once 'views/usser/consultaCallejero.php';
-	}
-*/
 	public function showRegisterMascota() {
 		$mascota = new Mascota(null, null, null, null, null, null, null, null, null, null, null); 
 		require_once 'views/usser/addMascota.php';
@@ -97,7 +85,7 @@ class MascotaController {
 		$this->mascotaDao->create($mascota);
 		echo"<script type='text/javascript'>
     		alert('La mascota ha sido registrada correctamente');
-    		window.location.href='./addMascota.php';
+    		window.location.href='./bienvenida.php';
     		</script>";
 	}
 
